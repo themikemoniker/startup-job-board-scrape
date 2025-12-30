@@ -122,17 +122,18 @@ function escapeHtml(str) {
 
 function writeBarChartSvg(filename, data, options = {}) {
   ensureDir(CHART_DIR);
-  const width = options.width ?? 480;
-  const barHeight = options.barHeight ?? 18;
-  const gap = options.gap ?? 10;
-  const margin = options.margin ?? 16;
-  const labelWidth = options.labelWidth ?? 200;
+  const width = options.width ?? 520;
+  const barHeight = options.barHeight ?? 20;
+  const gap = options.gap ?? 12;
+  const margin = options.margin ?? 24;
+  const labelWidth = options.labelWidth ?? 220;
   const title = options.title ?? "";
-  const chartWidth = width - labelWidth - margin * 2;
+  const chartWidth = width - labelWidth - margin * 2 - 32;
   const items = data.length ? data : [{ label: "No data yet", value: 0 }];
-  const chartHeight = margin * 2 + items.length * (barHeight + gap) + 20;
+  const chartHeight =
+    margin * 2 + (title ? 16 : 0) + items.length * (barHeight + gap) + barHeight;
   const maxValue = items.reduce((m, item) => Math.max(m, item.value), 0) || 1;
-  let yOffset = margin + 24;
+  let yOffset = margin + (title ? 24 : 8);
 
   let svg = `<svg width="${width}" height="${chartHeight}" viewBox="0 0 ${width} ${chartHeight}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${escapeHtml(
     title || "Bar chart"
@@ -144,17 +145,81 @@ function writeBarChartSvg(filename, data, options = {}) {
   svg += `<rect width="${width}" height="${chartHeight}" fill="#ffffff" rx="8" ry="8" stroke="#e5e7eb" />\n`;
   if (title) {
     svg += `<text class="title" x="${margin}" y="${margin + 12}">${escapeHtml(title)}</text>\n`;
+    yOffset += 12;
   }
 
   for (const item of items) {
-    const y = yOffset;
+    const centerY = yOffset + barHeight / 2;
     const barX = margin + labelWidth;
     const barWidth = chartWidth * (item.value / maxValue);
-    svg += `<text x="${margin}" y="${y + barHeight - 4}">${escapeHtml(item.label)}</text>\n`;
-    svg += `<rect x="${barX}" y="${y - barHeight + 6}" width="${barWidth}" height="${barHeight}" fill="#2563eb" rx="4" />\n`;
-    svg += `<text x="${barX + barWidth + 6}" y="${y + 2}">${item.value}</text>\n`;
+    svg += `<text x="${margin}" y="${centerY + 4}">${escapeHtml(item.label)}</text>\n`;
+    svg += `<rect x="${barX}" y="${centerY - barHeight / 2}" width="${barWidth}" height="${barHeight}" fill="#2563eb" rx="4" />\n`;
+    svg += `<text x="${barX + barWidth + 8}" y="${centerY + 4}">${item.value}</text>\n`;
     yOffset += barHeight + gap;
   }
+  svg += "</svg>\n";
+  fs.writeFileSync(path.join(CHART_DIR, filename), svg, "utf8");
+}
+
+function writeLineChartSvg(filename, data, options = {}) {
+  ensureDir(CHART_DIR);
+  const width = options.width ?? 540;
+  const height = options.height ?? 220;
+  const margin = options.margin ?? 32;
+  const title = options.title ?? "";
+  const items = data.length ? data : [{ label: "No data", value: 0 }];
+  const titleSpace = title ? 20 : 0;
+  const chartWidth = width - margin * 2;
+  const chartHeight = height - margin * 2 - titleSpace;
+  const maxValue = items.reduce((m, item) => Math.max(m, item.value), 0) || 1;
+  const minValue = 0;
+  const step = items.length > 1 ? chartWidth / (items.length - 1) : 0;
+  const baselineY = margin + titleSpace + chartHeight;
+
+  const points = items.map((item, idx) => {
+    const x = margin + idx * step;
+    const valueRatio = (item.value - minValue) / (maxValue - minValue || 1);
+    const y = baselineY - valueRatio * chartHeight;
+    return { x, y };
+  });
+
+  let svg = `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${escapeHtml(
+    title || "Line chart"
+  )}">\n`;
+  svg += `<style>
+    text { font-family: "Inter", "Segoe UI", sans-serif; font-size: 11px; fill: #111827; }
+    .title { font-size: 14px; font-weight: 600; }
+  </style>\n`;
+  svg += `<rect width="${width}" height="${height}" fill="#ffffff" rx="8" ry="8" stroke="#e5e7eb" />\n`;
+  if (title) {
+    svg += `<text class="title" x="${margin}" y="${margin + 12}">${escapeHtml(title)}</text>\n`;
+  }
+
+  // Axes
+  svg += `<line x1="${margin}" y1="${baselineY}" x2="${width - margin}" y2="${baselineY}" stroke="#d1d5db" />\n`;
+  svg += `<line x1="${margin}" y1="${margin + titleSpace}" x2="${margin}" y2="${baselineY}" stroke="#d1d5db" />\n`;
+
+  if (points.length > 1) {
+    const areaPath = `M ${points[0].x} ${baselineY} ` + points.map((pt) => `L ${pt.x} ${pt.y}`).join(" ") + ` L ${points[points.length - 1].x} ${baselineY} Z`;
+    svg += `<path d="${areaPath}" fill="rgba(37,99,235,0.15)" />\n`;
+    const path = points.map((pt) => `${pt.x},${pt.y}`).join(" ");
+    svg += `<polyline fill="none" stroke="#2563eb" stroke-width="2.5" points="${path}" />\n`;
+  } else {
+    const pt = points[0];
+    svg += `<circle cx="${pt.x}" cy="${pt.y}" r="4" fill="#2563eb" />\n`;
+  }
+
+  points.forEach((pt, idx) => {
+    const item = items[idx];
+    svg += `<circle cx="${pt.x}" cy="${pt.y}" r="3" fill="#1d4ed8" stroke="#ffffff" stroke-width="1" />\n`;
+    svg += `<text x="${pt.x}" y="${pt.y - 8}" text-anchor="middle">${item.value}</text>\n`;
+  });
+
+  items.forEach((item, idx) => {
+    const x = margin + idx * step;
+    svg += `<text x="${x}" y="${baselineY + 14}" text-anchor="middle">${escapeHtml(item.label)}</text>\n`;
+  });
+
   svg += "</svg>\n";
   fs.writeFileSync(path.join(CHART_DIR, filename), svg, "utf8");
 }
@@ -211,6 +276,32 @@ writeBarChartSvg("role-mix.svg", roleData, { title: "Role mix" });
 writeBarChartSvg("work-style.svg", workStyleData, { title: "Work style" });
 writeBarChartSvg("funding-stages.svg", fundingData, { title: "Funding stages" });
 
+function getIsoWeekKey(isoDate) {
+  if (!isoDate) return null;
+  const date = new Date(isoDate);
+  if (Number.isNaN(date)) return null;
+  const target = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+  const day = target.getUTCDay() || 7;
+  target.setUTCDate(target.getUTCDate() + 4 - day);
+  const yearStart = new Date(Date.UTC(target.getUTCFullYear(), 0, 1));
+  const weekNo = Math.ceil(((target - yearStart) / 86400000 + 1) / 7);
+  return { label: `${target.getUTCFullYear()}-W${String(weekNo).padStart(2, "0")}`, order: target.getTime() };
+}
+
+const weekCounts = new Map();
+for (const row of rows) {
+  const key = getIsoWeekKey(row.created_at ?? row.updated_at);
+  if (!key) continue;
+  weekCounts.set(key.label, { count: (weekCounts.get(key.label)?.count ?? 0) + 1, order: key.order });
+}
+
+const sortedWeeks = Array.from(weekCounts.entries())
+  .sort((a, b) => a[1].order - b[1].order)
+  .slice(-12)
+  .map(([label, info]) => ({ label, value: info.count }));
+
+writeLineChartSvg("weekly-trend.svg", sortedWeeks, { title: "Jobs added per week (last 12)" });
+
 const remotePct = formatPercent(workStyleCounts.get("Remote") ?? 0, total);
 const hybridPct = formatPercent(workStyleCounts.get("Hybrid") ?? 0, total);
 const onsitePct = formatPercent(workStyleCounts.get("Onsite/Unspecified") ?? 0, total);
@@ -225,6 +316,12 @@ const insightsBlock =
     leadingCompany
       ? `${leadingCompany.label} currently leads with ${leadingCompany.value} live roles.`
       : "No company posting data yet.",
+    "",
+    "### Weekly job trend",
+    "![Weekly trend chart](out/charts/weekly-trend.svg)",
+    sortedWeeks.length
+      ? `Showing the last ${sortedWeeks.length} weeks of postings.`
+      : "Trend data appears once weekly counts are available.",
     "",
     "### Role mix",
     "![Role mix chart](out/charts/role-mix.svg)",

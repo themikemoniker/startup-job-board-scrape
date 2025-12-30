@@ -61,6 +61,10 @@ Each workflow uses the GitHub Actions bot identity to push changes. Visit the Ac
 ![Top hiring companies chart](out/charts/top-companies.svg)
 EquipmentShare currently leads with 2710 live roles.
 
+### Weekly job trend
+![Weekly trend chart](out/charts/weekly-trend.svg)
+Showing the last 1 weeks of postings.
+
 ### Role mix
 ![Role mix chart](out/charts/role-mix.svg)
 Engineering & Infra roles make up 29% of all listings.
