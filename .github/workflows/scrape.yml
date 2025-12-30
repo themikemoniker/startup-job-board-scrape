@@ -30,8 +30,8 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Run scraper
-        run: npm run scrape
+      - name: Run fetch:today
+        run: npm run fetch:today
 
       - name: Update README stats
         run: npm run readme

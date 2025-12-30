@@ -48,10 +48,7 @@ Think of `fetch` as “opinionated presets” and `scrape` as “manual mode.”
 
 ## GitHub Actions automation
 
-Located in `.github/workflows/`:
+- `scrape.yml` (`scrape-topstartups`) runs every 4 hours. It installs deps, runs `npm run fetch:today`, refreshes the README stats, and commits any dataset changes.
+- `fetch-all.yml` is manual-only; dispatch it when you need a fresh 180-day backfill (`npm run fetch:all`).
 
-- `scrape.yml` (`scrape-topstartups`) runs every 4 hours. It executes `npm run scrape` + `npm run readme` and commits the updated dataset.
-- `fetch-today.yml` also runs every 4 hours (and manually) but only performs the lightweight `npm run fetch:today`.
-- `fetch-all.yml` is manual-only; trigger it when you need a fresh 180-day backfill.
-
-Each workflow installs dependencies, runs the script, and commits with the GitHub Actions bot if files changed. Check the Actions tab when something fails or when you want to trigger a manual run.
+Each workflow uses the GitHub Actions bot identity to push changes. Visit the Actions tab to monitor runs or re-run failures.
