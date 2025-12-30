@@ -1,0 +1,26 @@
+<svg width="480" height="220" viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Role mix">
+<style>
+    text { font-family: "Inter", "Segoe UI", sans-serif; font-size: 12px; fill: #111827; }
+    .title { font-size: 14px; font-weight: 600; }
+  </style>
+<rect width="480" height="220" fill="#ffffff" rx="8" ry="8" stroke="#e5e7eb" />
+<text class="title" x="16" y="28">Role mix</text>
+<text x="16" y="54">Engineering &amp; Infra</text>
+<rect x="216" y="28" width="248" height="18" fill="#2563eb" rx="4" />
+<text x="470" y="42">7127</text>
+<text x="16" y="82">Other</text>
+<rect x="216" y="56" width="217.37842009260558" height="18" fill="#2563eb" rx="4" />
+<text x="439.37842009260555" y="70">6247</text>
+<text x="16" y="110">Marketing &amp; Growth</text>
+<rect x="216" y="84" width="108.81100042093448" height="18" fill="#2563eb" rx="4" />
+<text x="330.8110004209345" y="98">3127</text>
+<text x="16" y="138">Product</text>
+<rect x="216" y="112" width="71.12557878490247" height="18" fill="#2563eb" rx="4" />
+<text x="293.1255787849025" y="126">2044</text>
+<text x="16" y="166">Data &amp; AI</text>
+<rect x="216" y="140" width="70.91679528553388" height="18" fill="#2563eb" rx="4" />
+<text x="292.9167952855339" y="154">2038</text>
+<text x="16" y="194">Sales &amp; Success</text>
+<rect x="216" y="168" width="60.234039567840604" height="18" fill="#2563eb" rx="4" />
+<text x="282.2340395678406" y="182">1731</text>
+</svg>

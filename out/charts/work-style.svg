@@ -1,0 +1,17 @@
+<svg width="480" height="136" viewBox="0 0 480 136" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Work style">
+<style>
+    text { font-family: "Inter", "Segoe UI", sans-serif; font-size: 12px; fill: #111827; }
+    .title { font-size: 14px; font-weight: 600; }
+  </style>
+<rect width="480" height="136" fill="#ffffff" rx="8" ry="8" stroke="#e5e7eb" />
+<text class="title" x="16" y="28">Work style</text>
+<text x="16" y="54">Remote</text>
+<rect x="216" y="28" width="77.04142011834318" height="18" fill="#2563eb" rx="4" />
+<text x="299.0414201183432" y="42">5775</text>
+<text x="16" y="82">Hybrid</text>
+<rect x="216" y="56" width="3.401828940290479" height="18" fill="#2563eb" rx="4" />
+<text x="225.40182894029047" y="70">255</text>
+<text x="16" y="110">Onsite/Unspecified</text>
+<rect x="216" y="84" width="248" height="18" fill="#2563eb" rx="4" />
+<text x="470" y="98">18590</text>
+</svg>

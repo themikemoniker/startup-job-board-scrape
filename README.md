@@ -52,3 +52,25 @@ Think of `fetch` as “opinionated presets” and `scrape` as “manual mode.”
 - `fetch-all.yml` is manual-only; dispatch it when you need a fresh 180-day backfill (`npm run fetch:all`).
 
 Each workflow uses the GitHub Actions bot identity to push changes. Visit the Actions tab to monitor runs or re-run failures.
+
+## Jobseeker insights
+
+<!-- DATASET_INSIGHTS:START -->
+
+### Top hiring companies
+![Top hiring companies chart](out/charts/top-companies.svg)
+EquipmentShare currently leads with 2710 live roles.
+
+### Role mix
+![Role mix chart](out/charts/role-mix.svg)
+Engineering & Infra roles make up 29% of all listings.
+
+### Work style
+![Work style chart](out/charts/work-style.svg)
+23% remote-friendly, 1% hybrid, 76% onsite/unspecified.
+
+### Funding stages
+![Funding stages chart](out/charts/funding-stages.svg)
+Seed startups lead postings right now.
+
+<!-- DATASET_INSIGHTS:END -->

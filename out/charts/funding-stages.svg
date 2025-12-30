@@ -1,0 +1,23 @@
+<svg width="480" height="192" viewBox="0 0 480 192" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Funding stages">
+<style>
+    text { font-family: "Inter", "Segoe UI", sans-serif; font-size: 12px; fill: #111827; }
+    .title { font-size: 14px; font-weight: 600; }
+  </style>
+<rect width="480" height="192" fill="#ffffff" rx="8" ry="8" stroke="#e5e7eb" />
+<text class="title" x="16" y="28">Funding stages</text>
+<text x="16" y="54">Seed</text>
+<rect x="216" y="28" width="7.230810957417955" height="18" fill="#2563eb" rx="4" />
+<text x="229.23081095741796" y="42">430</text>
+<text x="16" y="82">Series A</text>
+<rect x="216" y="56" width="20.801193382153514" height="18" fill="#2563eb" rx="4" />
+<text x="242.8011933821535" y="70">1237</text>
+<text x="16" y="110">Series B</text>
+<rect x="216" y="84" width="27.89747762408462" height="18" fill="#2563eb" rx="4" />
+<text x="249.89747762408462" y="98">1659</text>
+<text x="16" y="138">Series C+</text>
+<rect x="216" y="112" width="248" height="18" fill="#2563eb" rx="4" />
+<text x="470" y="126">14748</text>
+<text x="16" y="166">Other</text>
+<rect x="216" y="140" width="110.07648494711148" height="18" fill="#2563eb" rx="4" />
+<text x="332.07648494711145" y="154">6546</text>
+</svg>
