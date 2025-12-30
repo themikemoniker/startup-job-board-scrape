@@ -1,0 +1,28 @@
+{
+  "name": "startup-job-board-scrape",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "nodejs http + HTML Parsing => JSONL and CSV",
+  "main": "index.js",
+  "scripts": {
+    "fetch:today": "node scrape.js --mode=today --delayMs=500",
+    "fetch:all": "node scrape.js --mode=all --maxAgeDays=180 --delayMs=500",
+    "fetch:all:365": "node scrape.js --mode=all --maxAgeDays=365 --delayMs=500",
+    "test:fetch": "node scripts/test-fetch.js",
+    "readme": "node scripts/update-readme.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themikemoniker/startup-job-board-scrape.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/themikemoniker/startup-job-board-scrape/issues"
+  },
+  "homepage": "https://github.com/themikemoniker/startup-job-board-scrape#readme",
+  "dependencies": {
+    "cheerio": "^1.1.2"
+  }
+}
