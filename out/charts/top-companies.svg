@@ -9,8 +9,8 @@
 <rect x="244" y="60" width="220" height="20" fill="#2563eb" rx="4" />
 <text x="472" y="74">3002</text>
 <text x="24" y="106">Anduril Industries</text>
-<rect x="244" y="92" width="119.01399067288476" height="20" fill="#2563eb" rx="4" />
-<text x="371.01399067288474" y="106">1624</text>
+<rect x="244" y="92" width="119.16055962691539" height="20" fill="#2563eb" rx="4" />
+<text x="371.1605596269154" y="106">1626</text>
 <text x="24" y="138">Samsara</text>
 <rect x="244" y="124" width="68.08127914723518" height="20" fill="#2563eb" rx="4" />
 <text x="320.0812791472352" y="138">929</text>
@@ -18,6 +18,6 @@
 <rect x="244" y="156" width="53.204530313124586" height="20" fill="#2563eb" rx="4" />
 <text x="305.20453031312456" y="170">726</text>
 <text x="24" y="202">Databricks</text>
-<rect x="244" y="188" width="51.51898734177215" height="20" fill="#2563eb" rx="4" />
-<text x="303.5189873417722" y="202">703</text>
+<rect x="244" y="188" width="51.592271818787474" height="20" fill="#2563eb" rx="4" />
+<text x="303.5922718187875" y="202">704</text>
 </svg>
