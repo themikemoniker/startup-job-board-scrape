@@ -7,12 +7,12 @@
 <text class="title" x="32" y="44">Jobs added per week (last 12)</text>
 <line x1="32" y1="188" x2="508" y2="188" stroke="#d1d5db" />
 <line x1="32" y1="52" x2="32" y2="188" stroke="#d1d5db" />
-<path d="M 32 188 L 32 52 L 508 179.11850045961393 L 508 188 Z" fill="rgba(37,99,235,0.15)" />
-<polyline fill="none" stroke="#2563eb" stroke-width="2.5" points="32,52 508,179.11850045961393" />
+<path d="M 32 188 L 32 52 L 508 179.10762959114345 L 508 188 Z" fill="rgba(37,99,235,0.15)" />
+<polyline fill="none" stroke="#2563eb" stroke-width="2.5" points="32,52 508,179.10762959114345" />
 <circle cx="32" cy="52" r="3" fill="#1d4ed8" stroke="#ffffff" stroke-width="1" />
 <text x="32" y="44" text-anchor="middle">25021</text>
-<circle cx="508" cy="179.11850045961393" r="3" fill="#1d4ed8" stroke="#ffffff" stroke-width="1" />
-<text x="508" y="171.11850045961393" text-anchor="middle">1634</text>
+<circle cx="508" cy="179.10762959114345" r="3" fill="#1d4ed8" stroke="#ffffff" stroke-width="1" />
+<text x="508" y="171.10762959114345" text-anchor="middle">1636</text>
 <text x="32" y="202" text-anchor="middle">2026-W01</text>
 <text x="508" y="202" text-anchor="middle">2026-W02</text>
 </svg>
