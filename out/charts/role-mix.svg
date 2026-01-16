@@ -7,20 +7,20 @@
 <text class="title" x="24" y="36">Role mix</text>
 <text x="24" y="74">Engineering &amp; Infra</text>
 <rect x="244" y="60" width="220" height="20" fill="#2563eb" rx="4" />
-<text x="472" y="74">8000</text>
+<text x="472" y="74">8001</text>
 <text x="24" y="106">Other</text>
-<rect x="244" y="92" width="196.185" height="20" fill="#2563eb" rx="4" />
-<text x="448.185" y="106">7134</text>
+<rect x="244" y="92" width="196.1604799400075" height="20" fill="#2563eb" rx="4" />
+<text x="448.16047994000746" y="106">7134</text>
 <text x="24" y="138">Marketing &amp; Growth</text>
-<rect x="244" y="124" width="99.11" height="20" fill="#2563eb" rx="4" />
-<text x="351.11" y="138">3604</text>
+<rect x="244" y="124" width="99.0976127984002" height="20" fill="#2563eb" rx="4" />
+<text x="351.0976127984002" y="138">3604</text>
 <text x="24" y="170">Product</text>
-<rect x="244" y="156" width="65.72500000000001" height="20" fill="#2563eb" rx="4" />
-<text x="317.725" y="170">2390</text>
+<rect x="244" y="156" width="65.71678540182478" height="20" fill="#2563eb" rx="4" />
+<text x="317.7167854018248" y="170">2390</text>
 <text x="24" y="202">Data &amp; AI</text>
-<rect x="244" y="188" width="64.1575" height="20" fill="#2563eb" rx="4" />
-<text x="316.1575" y="202">2333</text>
+<rect x="244" y="188" width="64.14948131483564" height="20" fill="#2563eb" rx="4" />
+<text x="316.1494813148356" y="202">2333</text>
 <text x="24" y="234">Sales &amp; Success</text>
-<rect x="244" y="220" width="55.77" height="20" fill="#2563eb" rx="4" />
-<text x="307.77" y="234">2028</text>
+<rect x="244" y="220" width="55.763029621297335" height="20" fill="#2563eb" rx="4" />
+<text x="307.76302962129733" y="234">2028</text>
 </svg>

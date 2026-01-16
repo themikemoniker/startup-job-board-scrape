@@ -6,18 +6,18 @@
 <rect width="520" height="244" fill="#ffffff" rx="8" ry="8" stroke="#e5e7eb" />
 <text class="title" x="24" y="36">Funding stages</text>
 <text x="24" y="74">Seed</text>
-<rect x="244" y="60" width="6.871746332229058" height="20" fill="#2563eb" rx="4" />
-<text x="258.87174633222907" y="74">528</text>
+<rect x="244" y="60" width="6.87133984028394" height="20" fill="#2563eb" rx="4" />
+<text x="258.87133984028395" y="74">528</text>
 <text x="24" y="106">Series A</text>
-<rect x="244" y="92" width="17.804070042593466" height="20" fill="#2563eb" rx="4" />
-<text x="269.8040700425935" y="106">1368</text>
+<rect x="244" y="92" width="17.80301685891748" height="20" fill="#2563eb" rx="4" />
+<text x="269.8030168589175" y="106">1368</text>
 <text x="24" y="138">Series B</text>
-<rect x="244" y="124" width="24.597728348319926" height="20" fill="#2563eb" rx="4" />
-<text x="276.59772834831995" y="138">1890</text>
+<rect x="244" y="124" width="24.596273291925467" height="20" fill="#2563eb" rx="4" />
+<text x="276.59627329192546" y="138">1890</text>
 <text x="24" y="170">Series C+</text>
 <rect x="244" y="156" width="220" height="20" fill="#2563eb" rx="4" />
-<text x="472" y="170">16904</text>
+<text x="472" y="170">16905</text>
 <text x="24" y="202">Other</text>
-<rect x="244" y="188" width="96.42569805963086" height="20" fill="#2563eb" rx="4" />
-<text x="348.42569805963086" y="202">7409</text>
+<rect x="244" y="188" width="96.41999408459036" height="20" fill="#2563eb" rx="4" />
+<text x="348.41999408459037" y="202">7409</text>
 </svg>
