@@ -4,8 +4,8 @@
 
 ## Dataset quick stats
 
-Total unique jobs: 28617
-Most recent update: 2026-01-18T20:22:34.532Z (0 days ago)
+Total unique jobs: 28618
+Most recent update: 2026-01-19T01:49:04.569Z (0 days ago)
 
 Files:
 - out/index.json (deduped index)
@@ -63,7 +63,7 @@ EquipmentShare currently leads with 3255 live roles.
 
 ### Weekly job trend
 ![Weekly trend chart](out/charts/weekly-trend.svg)
-Showing the last 3 weeks of postings.
+Showing the last 4 weeks of postings.
 
 ### Role mix
 ![Role mix chart](out/charts/role-mix.svg)
