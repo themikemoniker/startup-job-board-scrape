@@ -4,8 +4,8 @@
 
 ## Dataset quick stats
 
-Total unique jobs: 29230
-Most recent update: 2026-01-22T08:32:40.289Z (0 days ago)
+Total unique jobs: 29235
+Most recent update: 2026-01-22T12:49:50.683Z (0 days ago)
 
 Files:
 - out/index.json (deduped index)
