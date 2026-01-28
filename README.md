@@ -4,8 +4,8 @@
 
 ## Dataset quick stats
 
-Total unique jobs: 30671
-Most recent update: 2026-01-28T08:32:25.062Z (0 days ago)
+Total unique jobs: 30677
+Most recent update: 2026-01-28T12:51:09.731Z (0 days ago)
 
 Files:
 - out/index.json (deduped index)
@@ -59,7 +59,7 @@ Each workflow uses the GitHub Actions bot identity to push changes. Visit the Ac
 
 ### Top hiring companies
 ![Top hiring companies chart](out/charts/top-companies.svg)
-EquipmentShare currently leads with 3440 live roles.
+EquipmentShare currently leads with 3442 live roles.
 
 ### Weekly job trend
 ![Weekly trend chart](out/charts/weekly-trend.svg)
