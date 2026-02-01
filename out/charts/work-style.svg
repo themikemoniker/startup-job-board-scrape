@@ -6,12 +6,12 @@
 <rect width="520" height="180" fill="#ffffff" rx="8" ry="8" stroke="#e5e7eb" />
 <text class="title" x="24" y="36">Work style</text>
 <text x="24" y="74">Remote</text>
-<rect x="244" y="60" width="67.63709373823566" height="20" fill="#2563eb" rx="4" />
-<text x="319.63709373823565" y="74">7350</text>
+<rect x="244" y="60" width="67.77981651376147" height="20" fill="#2563eb" rx="4" />
+<text x="319.7798165137615" y="74">7388</text>
 <text x="24" y="106">Hybrid</text>
-<rect x="244" y="92" width="3.1195884050696447" height="20" fill="#2563eb" rx="4" />
-<text x="255.11958840506963" y="106">339</text>
+<rect x="244" y="92" width="3.110091743119266" height="20" fill="#2563eb" rx="4" />
+<text x="255.11009174311926" y="106">339</text>
 <text x="24" y="138">Onsite/Unspecified</text>
 <rect x="244" y="124" width="220" height="20" fill="#2563eb" rx="4" />
-<text x="472" y="138">23907</text>
+<text x="472" y="138">23980</text>
 </svg>
